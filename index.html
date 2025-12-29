@@ -3,24 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World | Personal Website</title>
+    <title>My Personal Portfolio</title>
     <style>
-        body { font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #f4f4f9; color: #333; }
-        .container { text-align: center; }
-        h1 { font-size: 3rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; color: #666; }
-    </style>
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f4f4f9;
+            --text-color: #333;
+            --accent-color: #007bff;
+        }
 
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-bg);
+        }
+
+        header {
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--secondary-bg);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--secondary-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <p>My personal website is currently under construction. Stay tuned!</p>
 
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="darjisagar7" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/darjisagar7?trk=profile-badge">Sagar Darji</a></div>
-              
+    <header>
+        <h1>Hi, I'm Sagar Darji</h1>
+        <p>Software Developer | Tech Enthusiast | Creator</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Currently SDE2 at AWS</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>A brief description of what this project does and the tech stack used (e.g., React, Node.js).</p>
+                    <a href="#">View Code →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>Another awesome project that shows off your skills. Explain the "why" behind it.</p>
+                    <a href="#">View Code →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to collaborating on new projects or just chatting about tech.</p>
+            <p>Email: <a href="mailto:darjisagar7@gmail.com">darjisagar7@gmail.com</a></p>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Sagar Darji. Built with HTML & CSS.</p>
+    </footer>
+
 </body>
 </html>
