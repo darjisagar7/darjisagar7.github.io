@@ -1,0 +1,8 @@
+title: My Portfolio & Blog
+email: darjisagar7@gmail.com
+description: Welcome to my professional portfolio.
+baseurl: "" 
+url: "https://darjisagar7.github.io"
+
+# Build settings
+theme: minima # Optional: You can use a pre-built theme or keep it custom
